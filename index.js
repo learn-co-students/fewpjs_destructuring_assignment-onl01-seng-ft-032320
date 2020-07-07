@@ -47,3 +47,27 @@ const k_muppet = {
 
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(" ");
+
+const [Bessie, Dolly, Babe, Little ] = farmAnimals.split(" ").filter(function(animal) {
+  return animal !== "horse"
+})
+
+let fourAnimals = farmAnimals.split(" ").filter(function(animal) {
+  return animal !== "horse"
+})
+
+const [black_and_white, black, pink] = fourAnimals.filter(function(animal){
+  return animal != "chicken"
+})
+
+const [red, orange, yellow, green, blue, indigo, violet] = colors
+
+const [r, o, y, g, b, i, v] = colors 
+
+const indg = colors[5]
+
+const { name, color, song, job, partner } = muppet;
+
+const {k_album: {the_muppet_movie: {song_2}}, k_album: {the_muppet_movie: {song_4}}, k_job, k_partner} = k_muppet
